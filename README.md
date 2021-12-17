@@ -3,7 +3,7 @@
 Simple script that uses Syft (https://github.com/anchore/syft) and Grype (https://github.com/anchore/grype) to run inventory of dependencies on remote servers, download it and run grype to understand vulnerabilities.  The script will insall syft and grype (if you don't have them) upload syft to each server in the list, run it, download results and run grype to show vulnerabilities.
 
 Steps:
-1. Set `$root_directory` and `$install_dir` variables to where this repo is and where you want binaries installed respectively
+1. Set `$root_dir` and `$install_dir` variables to where this repo is and where you want binaries installed respectively
 2. List out servers you want to scan in `@servers` array
 3. Run `scan.pl`.  If you don't have syft and grype installed it'll install it for you
 
