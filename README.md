@@ -7,4 +7,4 @@ Steps:
 2. List out servers you want to scan in `@servers` array
 3. Run `scan.pl`.  If you don't have syft and grype installed it'll install it for you
 
-Results of grype from each server will be available in `grype_output/` folder.  From there, you can run analysis on individual server or across servers.  For example, you can `rep --with-filename log4j grype_output/*` to check for log4j zero-day CVE.
+Results of grype from each server will be available in `grype_output/` folder.  From there, you can run analysis on individual server or across servers.  For example, you can `grep --with-filename log4j grype_output/*` to check for log4j zero-day CVE.
