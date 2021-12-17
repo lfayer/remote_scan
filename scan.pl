@@ -1,15 +1,16 @@
 #!/usr/bin/perl -w
 use strict;
 
+# path to this repo
 my $root_dir = "~/remote_scan";
+
+# where to install syft and grype if don't have them (use /usr/local/bin for global install, home dir folder for local)
+my $install_dir = "/path/to/remote_scan";
 
 # list of servers to scan. must have passwordless ssh access
 my @servers = ('server1',
                 'server2',
                 'server3');
-
-# install syft and grype if don't have them (use /usr/local/bin for global install, home dir folder for local)
-my $install_dir = "/path/to/remote_scan";
 
 `curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b $install_dir` unless (-f "$install_dir/grype");
 `curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b $install_dir` unless (-f "$install_dir/syft");
